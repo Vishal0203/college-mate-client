@@ -34,6 +34,10 @@ class LoginViewController: UIViewController {
                 case .Success:
                     if let response = response.result.value {
                         let auth_token = JSON(response)["token"].stringValue
+                        
+                        let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+                        prefs.setObject(auth_token, forKey: "todevs_token")
+                        
                         self.getUserData(auth_token)
                     }
                     
@@ -44,9 +48,7 @@ class LoginViewController: UIViewController {
     }
     
     func getUserData(auth_token: String) -> Void {
-        Alamofire.request(.GET, "http://139.59.4.205/api/v1_0/whoami",
-            headers: ["Authorization": "Bearer \(auth_token)"],
-            parameters: ["from": "web"])
+        Alamofire.request(HttpHelper.Router.whoami(["from": "web"]))
             .validate()
             .responseJSON { response in
                 switch response.result {
@@ -55,7 +57,6 @@ class LoginViewController: UIViewController {
                         let user_info = JSON(response)["user"].rawString()
                         
                         let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-                        prefs.setObject(auth_token, forKey: "todevs_token")
                         prefs.setObject(user_info, forKey: "user_info")
                         prefs.synchronize()
                         
