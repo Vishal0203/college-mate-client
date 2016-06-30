@@ -21,6 +21,18 @@ class HomeViewController: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        if let token = prefs.stringForKey("todevs_token") {
+            print(token)
+            if let user_info = prefs.stringForKey("user_info") {
+                print(user_info)
+            }
+        } else {
+            self.performSegueWithIdentifier("requiresLogin", sender: self)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

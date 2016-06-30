@@ -8,14 +8,13 @@
 
 import UIKit
 import Alamofire
-
+import SwiftyJSON
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var username: UITextField!
     
     @IBOutlet weak var password: UITextField!
-    
     
     @IBAction func loginPress(sender: AnyObject) {
         
@@ -24,18 +23,63 @@ class LoginViewController: UIViewController {
             "password": self.password.text! as String
         ]
         
-        Alamofire.request(.POST, "http://139.59.4.205/api/v1_0/login", parameters: parameters)
+        performLogin(parameters)
+    }
+    
+    func performLogin(user_creds: [String : AnyObject]) -> Void {
+        Alamofire.request(.POST, "http://139.59.4.205/api/v1_0/login", parameters: user_creds)
+            .validate()
             .responseJSON { response in
-                if let JSON = response.result.value {
-                    print(JSON["token"])
+                switch response.result {
+                case .Success:
+                    if let response = response.result.value {
+                        let auth_token = JSON(response)["token"].stringValue
+                        self.getUserData(auth_token)
+                    }
+                    
+                case .Failure(let error):
+                    print(error)
+                }
+        }
+    }
+    
+    func getUserData(auth_token: String) -> Void {
+        Alamofire.request(.GET, "http://139.59.4.205/api/v1_0/whoami",
+            headers: ["Authorization": "Bearer \(auth_token)"],
+            parameters: ["from": "web"])
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    if let response = response.result.value {
+                        let user_info = JSON(response)["user"].rawString()
+                        
+                        let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+                        prefs.setObject(auth_token, forKey: "todevs_token")
+                        prefs.setObject(user_info, forKey: "user_info")
+                        prefs.synchronize()
+                        
+                        self.navigationController?.popViewControllerAnimated(true)
+                    }
+                case .Failure(let error):
+                    print(error)
                 }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,15 +87,13 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if "loginSuccess" == segue.identifier {
+            
+        }
     }
-    */
-
 }

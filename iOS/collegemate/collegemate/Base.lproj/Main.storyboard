@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="InN-cM-e1D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XNj-tb-nfD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -40,7 +40,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXX-Bl-fqf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background-1" translatesAutoresizingMaskIntoConstraints="NO" id="RLi-1S-jb2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KXX-Bl-fqf">
                                 <rect key="frame" x="31" y="170" width="537" height="278"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UAE-7y-Lp9">
                                     <rect key="frame" x="0.0" y="0.0" width="537" height="278"/>
@@ -72,7 +75,6 @@
                                             </state>
                                             <connections>
                                                 <action selector="loginPress:" destination="InN-cM-e1D" eventType="touchUpInside" id="nca-XV-Jfx"/>
-                                                <segue destination="XNj-tb-nfD" kind="show" id="UqN-gL-l0A"/>
                                             </connections>
                                         </button>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hDA-4h-t81">
@@ -99,12 +101,15 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" red="0.19374963058285011" green="0.80236724528231118" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KXX-Bl-fqf" firstAttribute="centerX" secondItem="H4G-XT-9Ue" secondAttribute="centerX" id="9QH-Dy-DF2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RLi-1S-jb2" secondAttribute="trailing" constant="-20" id="DH5-4W-6ER"/>
                             <constraint firstItem="KXX-Bl-fqf" firstAttribute="leading" secondItem="H4G-XT-9Ue" secondAttribute="leadingMargin" constant="11" id="J6o-Nu-kK1"/>
+                            <constraint firstItem="RLi-1S-jb2" firstAttribute="leading" secondItem="H4G-XT-9Ue" secondAttribute="leadingMargin" constant="-20" id="RFo-2g-BWV"/>
+                            <constraint firstItem="fdC-KX-LOX" firstAttribute="top" secondItem="RLi-1S-jb2" secondAttribute="bottom" id="VcM-9R-JpF"/>
                             <constraint firstItem="KXX-Bl-fqf" firstAttribute="top" secondItem="zhq-T9-JZb" secondAttribute="bottom" constant="150" id="fvy-9Z-O33"/>
+                            <constraint firstItem="RLi-1S-jb2" firstAttribute="top" secondItem="zhq-T9-JZb" secondAttribute="bottom" constant="-20" id="hhs-cJ-cTB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -114,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="if6-tI-deJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1574" y="615"/>
+            <point key="canvasLocation" x="1312" y="615"/>
         </scene>
         <!--Home Page-->
         <scene sceneID="tr1-bQ-kC9">
@@ -134,11 +139,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="navMenu" destination="n1Y-f3-4Id" id="BcI-2w-8Rx"/>
+                        <segue destination="InN-cM-e1D" kind="show" identifier="requiresLogin" id="9tC-C2-DpF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBw-nw-fm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="246"/>
+            <point key="canvasLocation" x="604" y="615"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cay-St-qlA">
@@ -156,7 +162,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ql-QW-1Rb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-60" y="246"/>
+            <point key="canvasLocation" x="-116" y="615"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="eDE-Fk-owK">
@@ -195,7 +201,10 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Uk-rT-1qF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-60" y="972"/>
+            <point key="canvasLocation" x="-870" y="1404"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background-1" width="564" height="1055"/>
+    </resources>
 </document>

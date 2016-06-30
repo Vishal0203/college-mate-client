@@ -17,6 +17,7 @@
 		C9D356891D22EE9200E1BC51 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D356881D22EE9200E1BC51 /* SWRevealViewController.m */; };
 		C9D3568B1D23199E00E1BC51 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3568A1D23199E00E1BC51 /* HomeViewController.swift */; };
 		C9D3568D1D239B7200E1BC51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3568C1D239B7200E1BC51 /* LoginViewController.swift */; };
+		C9D356921D2439FA00E1BC51 /* HttpHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D356911D2439FA00E1BC51 /* HttpHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		C9D356881D22EE9200E1BC51 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../iOS Practice/SWRevealViewController/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		C9D3568A1D23199E00E1BC51 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C9D3568C1D239B7200E1BC51 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C9D356911D2439FA00E1BC51 /* HttpHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		C9D356591D22DAF800E1BC51 = {
 			isa = PBXGroup;
 			children = (
+				C9D3568E1D2438A600E1BC51 /* Helpers */,
 				C9D356851D22EE4400E1BC51 /* SWRevealViewController */,
 				C9D356641D22DAF800E1BC51 /* collegemate */,
 				C9D356791D22DAF800E1BC51 /* collegemateTests */,
@@ -144,6 +147,15 @@
 				C9D356861D22EE9100E1BC51 /* collegemate-Bridging-Header.h */,
 			);
 			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		C9D3568E1D2438A600E1BC51 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C9D356911D2439FA00E1BC51 /* HttpHelper.swift */,
+			);
+			name = Helpers;
+			path = collegemate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9D3568D1D239B7200E1BC51 /* LoginViewController.swift in Sources */,
+				C9D356921D2439FA00E1BC51 /* HttpHelper.swift in Sources */,
 				C9D356661D22DAF800E1BC51 /* AppDelegate.swift in Sources */,
 				C9D356891D22EE9200E1BC51 /* SWRevealViewController.m in Sources */,
 				C9D3568B1D23199E00E1BC51 /* HomeViewController.swift in Sources */,
