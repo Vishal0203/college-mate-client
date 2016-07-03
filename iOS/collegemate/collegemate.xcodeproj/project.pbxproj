@@ -94,6 +94,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C932DE3A1D266DD20040F88A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C9D3568C1D239B7200E1BC51 /* LoginViewController.swift */,
+				C9D3568A1D23199E00E1BC51 /* HomeViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		C9D356591D22DAF800E1BC51 = {
 			isa = PBXGroup;
 			children = (
@@ -119,13 +128,12 @@
 		C9D356641D22DAF800E1BC51 /* collegemate */ = {
 			isa = PBXGroup;
 			children = (
+				C932DE3A1D266DD20040F88A /* ViewControllers */,
 				C9D356651D22DAF800E1BC51 /* AppDelegate.swift */,
 				C9D356691D22DAF800E1BC51 /* Main.storyboard */,
-				C9D3568C1D239B7200E1BC51 /* LoginViewController.swift */,
 				C9D3566C1D22DAF800E1BC51 /* Assets.xcassets */,
 				C9D3566E1D22DAF800E1BC51 /* LaunchScreen.storyboard */,
 				C9D356711D22DAF800E1BC51 /* Info.plist */,
-				C9D3568A1D23199E00E1BC51 /* HomeViewController.swift */,
 			);
 			path = collegemate;
 			sourceTree = "<group>";
@@ -214,6 +222,11 @@
 				TargetAttributes = {
 					C9D356611D22DAF800E1BC51 = {
 						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					C9D356751D22DAF800E1BC51 = {
 						CreatedOnToolsVersion = 7.3.1;

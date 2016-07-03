@@ -8,16 +8,18 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class HttpHelper: NSObject {
     enum Router: URLRequestConvertible {
         static let baseURLString = "http://139.59.4.205/api/v1_0"
         
         case whoami([String: String])
+        case token_refresh()
         
         var method: Alamofire.Method {
             switch self {
-            case .whoami:
+            case .whoami, .token_refresh:
                 return .GET
             }
         }
@@ -26,10 +28,10 @@ class HttpHelper: NSObject {
             switch self {
             case .whoami:
                 return "/whoami"
+            case .token_refresh:
+                return "/refresh"
             }
         }
-        
-        // MARK: URLRequestConvertible
         
         var URLRequest: NSMutableURLRequest {
             let URL = NSURL(string: Router.baseURLString)!
@@ -45,9 +47,42 @@ class HttpHelper: NSObject {
             switch self {
             case .whoami(let parameters):
                 return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: parameters).0
-//            default:
-//                return mutableURLRequest
+            default:
+                return mutableURLRequest
             }
         }
     }
+    
+    class func errorHandler(error: Response<AnyObject, NSError>) -> Bool {
+        var performSegue = false
+        if let status = error.response?.statusCode {
+            if status == 401 {
+                let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+                if prefs.stringForKey("todevs_token") != nil {
+                    
+                    Alamofire.request(Router.token_refresh())
+                        .validate()
+                        .responseJSON { response in
+                            switch response.result {
+                            case .Success:
+                                if let auth_header = response.response?.allHeaderFields["Authorization"] as? String {
+                                    let auth_token = auth_header.stringByReplacingOccurrencesOfString("Bearer ", withString: "")
+                                    
+                                    let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+                                    prefs.setObject(auth_token, forKey: "todevs_token")
+                                }
+                            case .Failure:
+                                performSegue = true
+                            }
+                        }
+                    
+                } else {
+                    print(error)
+                }
+            }
+        }
+        
+        return performSegue
+    }
+    
 }

@@ -18,12 +18,12 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginPress(sender: AnyObject) {
         
-        let parameters = [
+        let credentials = [
             "email": self.username.text! as String,
             "password": self.password.text! as String
         ]
         
-        performLogin(parameters)
+        performLogin(credentials)
     }
     
     func performLogin(user_creds: [String : AnyObject]) -> Void {
@@ -40,9 +40,8 @@ class LoginViewController: UIViewController {
                         
                         self.getUserData(auth_token)
                     }
-                    
-                case .Failure(let error):
-                    print(error)
+                case .Failure:
+                    HttpHelper.errorHandler(response)
                 }
         }
     }
@@ -62,8 +61,8 @@ class LoginViewController: UIViewController {
                         
                         self.navigationController?.popViewControllerAnimated(true)
                     }
-                case .Failure(let error):
-                    print(error)
+                case .Failure:
+                    HttpHelper.errorHandler(response)
                 }
         }
     }
