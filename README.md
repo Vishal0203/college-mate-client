@@ -8,3 +8,6 @@
 
 Note: Close XCode (if running) before performing above steps
 
+### Android Environment Setup
+
+- Copy google-services.json to app folder from https://console.firebase.google.com (Login from toDevs Account) 
