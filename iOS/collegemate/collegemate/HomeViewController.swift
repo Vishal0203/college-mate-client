@@ -14,12 +14,27 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if self.revealViewController() != nil {
             navMenu.target = self.revealViewController()
             navMenu.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+            customizeSideMenu()
         }
+    }
+    
+    func customizeSideMenu() -> Void {
+        self.revealViewController().rearViewRevealWidth = 300.0
+        self.revealViewController().rearViewRevealDisplacement = 60.0
+        
+        self.revealViewController().toggleAnimationType = SWRevealToggleAnimationType.Spring
+        self.revealViewController().toggleAnimationDuration = 0.85
+        
+        self.revealViewController().frontViewShadowRadius = 10.0
+        self.revealViewController().frontViewShadowOffset = CGSizeMake(0.0, 2.5)
+        self.revealViewController().frontViewShadowOpacity = 0.8
+        self.revealViewController().frontViewShadowColor = UIColor.darkGrayColor()
     }
     
     override func viewDidAppear(animated: Bool) {
