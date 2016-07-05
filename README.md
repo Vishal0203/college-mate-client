@@ -2,7 +2,7 @@
 
 ### iOS Environment Setup
 
-- Install `cocoapods` using `npm install -g cocoapods`
+- Install `cocoapods` using `gem install cocoapods`
 - Run `pod install` from project root, to install dependencies
 - Use `collegemate.xcworkspace` file to open project in XCode
 
