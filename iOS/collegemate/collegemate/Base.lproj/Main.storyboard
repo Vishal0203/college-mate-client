@@ -26,7 +26,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="owe-LL-HLG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-870" y="615"/>
+            <point key="canvasLocation" x="-2622" y="-1265"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="LcD-t1-Xif">
@@ -55,7 +55,7 @@
                                                 <constraint firstAttribute="height" constant="58" id="z2I-Xn-uGy"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="31"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="f9y-lb-VGV">
@@ -119,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="if6-tI-deJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312" y="615"/>
+            <point key="canvasLocation" x="-476" y="-1961"/>
         </scene>
         <!--Home Page-->
         <scene sceneID="tr1-bQ-kC9">
@@ -132,7 +132,23 @@
                     <view key="view" contentMode="scaleToFill" id="qmV-ng-75s">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQp-bn-SBJ">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="fUe-xq-rEZ"/>
+                                    <tabBarItem systemItem="more" id="Nqh-Jh-QdE"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dQp-bn-SBJ" firstAttribute="leading" secondItem="qmV-ng-75s" secondAttribute="leading" id="ccq-DG-ejf"/>
+                            <constraint firstItem="dQp-bn-SBJ" firstAttribute="centerX" secondItem="qmV-ng-75s" secondAttribute="centerX" id="fqu-1B-scW"/>
+                            <constraint firstAttribute="trailing" secondItem="dQp-bn-SBJ" secondAttribute="trailing" id="kvc-Ld-dM0"/>
+                            <constraint firstItem="dQp-bn-SBJ" firstAttribute="bottom" secondItem="mzC-HM-gTv" secondAttribute="top" id="qPq-Va-edL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home Page" id="IL6-SA-f7v">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="n1Y-f3-4Id"/>
@@ -144,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBw-nw-fm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604" y="615"/>
+            <point key="canvasLocation" x="-1160" y="-1961"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cay-St-qlA">
@@ -162,7 +178,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ql-QW-1Rb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-116" y="615"/>
+            <point key="canvasLocation" x="-1848" y="-1961"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="eDE-Fk-owK">
@@ -185,7 +201,7 @@
                                             <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -201,7 +217,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Uk-rT-1qF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-870" y="1404"/>
+            <point key="canvasLocation" x="-2622" y="-509"/>
         </scene>
     </scenes>
     <resources>

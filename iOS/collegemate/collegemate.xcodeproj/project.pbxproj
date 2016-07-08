@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		73289FE168A8378CC389F5E8 /* Pods_collegemate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CF62CCFB51A9A4D27050DF /* Pods_collegemate.framework */; };
 		9BA65ABBB21BBA190C75BF2F /* Pods_collegemateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F04698522E3442BC98BE656 /* Pods_collegemateTests.framework */; };
+		C999B57A1D2E1B6400EA87A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C999B5791D2E1B6400EA87A2 /* GoogleService-Info.plist */; };
 		C9D356661D22DAF800E1BC51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D356651D22DAF800E1BC51 /* AppDelegate.swift */; };
 		C9D3566B1D22DAF800E1BC51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D356691D22DAF800E1BC51 /* Main.storyboard */; };
 		C9D3566D1D22DAF800E1BC51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D3566C1D22DAF800E1BC51 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		70CF62CCFB51A9A4D27050DF /* Pods_collegemate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_collegemate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87ED6EC70316C3FBA304561D /* Pods-collegemate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collegemate.release.xcconfig"; path = "Pods/Target Support Files/Pods-collegemate/Pods-collegemate.release.xcconfig"; sourceTree = "<group>"; };
 		B9E0C4AEE80070D2488DB138 /* Pods-collegemateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collegemateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-collegemateTests/Pods-collegemateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C999B5791D2E1B6400EA87A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C9D356621D22DAF800E1BC51 /* collegemate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = collegemate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D356651D22DAF800E1BC51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9D3566A1D22DAF800E1BC51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				C9D356691D22DAF800E1BC51 /* Main.storyboard */,
 				C9D3566C1D22DAF800E1BC51 /* Assets.xcassets */,
 				C9D3566E1D22DAF800E1BC51 /* LaunchScreen.storyboard */,
+				C999B5791D2E1B6400EA87A2 /* GoogleService-Info.plist */,
 				C9D356711D22DAF800E1BC51 /* Info.plist */,
 			);
 			path = collegemate;
@@ -222,8 +225,12 @@
 				TargetAttributes = {
 					C9D356611D22DAF800E1BC51 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = CX8659V4DU;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -259,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9D356701D22DAF800E1BC51 /* LaunchScreen.storyboard in Resources */,
+				C999B57A1D2E1B6400EA87A2 /* GoogleService-Info.plist in Resources */,
 				C9D3566D1D22DAF800E1BC51 /* Assets.xcassets in Resources */,
 				C9D3566B1D22DAF800E1BC51 /* Main.storyboard in Resources */,
 			);
@@ -417,6 +425,77 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C9A761371D2FE2B500D998E6 /* adHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vishal Sharma (CX8659V4DU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vishal Sharma (CX8659V4DU)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "e44d0843-5acf-409c-83c1-8d148913728d";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = adHoc;
+		};
+		C9A761381D2FE2B500D998E6 /* adHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87ED6EC70316C3FBA304561D /* Pods-collegemate.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vishal Sharma (CX8659V4DU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vishal Sharma (CX8659V4DU)";
+				INFOPLIST_FILE = collegemate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = todevs.com.collegemate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e44d0843-5acf-409c-83c1-8d148913728d";
+				SWIFT_OBJC_BRIDGING_HEADER = "collegemate-Bridging-Header.h";
+			};
+			name = adHoc;
+		};
+		C9A761391D2FE2B500D998E6 /* adHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C454C0BADBF726FAA565A75 /* Pods-collegemateTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = collegemateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = todevs.com.collegemateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/collegemate.app/collegemate";
+			};
+			name = adHoc;
+		};
 		C9D3567D1D22DAF800E1BC51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -435,7 +514,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vishal Sharma (Q539L2TBL8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vishal Sharma (Q539L2TBL8)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -457,6 +537,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "ece2e6a9-ff56-474e-9a87-5b5183561b17";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -481,7 +562,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vishal Sharma (CX8659V4DU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vishal Sharma (CX8659V4DU)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -496,6 +578,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "e44d0843-5acf-409c-83c1-8d148913728d";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -508,10 +591,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vishal Sharma (Q539L2TBL8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vishal Sharma (Q539L2TBL8)";
 				INFOPLIST_FILE = collegemate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = todevs.com.collegemate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ece2e6a9-ff56-474e-9a87-5b5183561b17";
 				SWIFT_OBJC_BRIDGING_HEADER = "collegemate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -523,10 +609,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vishal Sharma (CX8659V4DU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vishal Sharma (CX8659V4DU)";
 				INFOPLIST_FILE = collegemate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = todevs.com.collegemate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e44d0843-5acf-409c-83c1-8d148913728d";
 				SWIFT_OBJC_BRIDGING_HEADER = "collegemate-Bridging-Header.h";
 			};
 			name = Release;
@@ -565,6 +654,7 @@
 			buildConfigurations = (
 				C9D3567D1D22DAF800E1BC51 /* Debug */,
 				C9D3567E1D22DAF800E1BC51 /* Release */,
+				C9A761371D2FE2B500D998E6 /* adHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -574,6 +664,7 @@
 			buildConfigurations = (
 				C9D356801D22DAF800E1BC51 /* Debug */,
 				C9D356811D22DAF800E1BC51 /* Release */,
+				C9A761381D2FE2B500D998E6 /* adHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -583,6 +674,7 @@
 			buildConfigurations = (
 				C9D356831D22DAF800E1BC51 /* Debug */,
 				C9D356841D22DAF800E1BC51 /* Release */,
+				C9A761391D2FE2B500D998E6 /* adHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

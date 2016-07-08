@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseInstanceID
 
 class HomeViewController: UIViewController {
 
@@ -22,6 +23,9 @@ class HomeViewController: UIViewController {
             
             customizeSideMenu()
         }
+        
+        let token = FIRInstanceID.instanceID().token()!
+        print("InstanceID token: \(token)")
     }
     
     func customizeSideMenu() -> Void {
