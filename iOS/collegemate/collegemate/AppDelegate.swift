@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject],
                      fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-        print("Message ID: \(userInfo["gcm.message_id"]!)")
+//        print("Message ID: \(userInfo["gcm.message_id"]!)")
         print("%@", userInfo)
     }
     
@@ -61,8 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-        FIRMessaging.messaging().disconnect()
-        print("Disconnected from FCM.")
+//        FIRMessaging.messaging().disconnect()
+//        print("Disconnected from FCM.")
     }
 
     func applicationWillEnterForeground(application: UIApplication) {

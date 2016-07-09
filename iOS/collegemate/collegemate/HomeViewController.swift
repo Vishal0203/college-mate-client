@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseMessaging
 import FirebaseInstanceID
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var navMenu: UIBarButtonItem!
+    
+    @IBAction func Subscribe(sender: AnyObject) {
+        FIRMessaging.messaging().subscribeToTopic("/topics/ios")
+        print("Subscribed to ios topic")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +30,6 @@ class HomeViewController: UIViewController {
             
             customizeSideMenu()
         }
-        
-        let token = FIRInstanceID.instanceID().token()!
-        print("InstanceID token: \(token)")
     }
     
     func customizeSideMenu() -> Void {

@@ -40,7 +40,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background-1" translatesAutoresizingMaskIntoConstraints="NO" id="RLi-1S-jb2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="RLi-1S-jb2">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KXX-Bl-fqf">
@@ -141,6 +141,13 @@
                                     <tabBarItem systemItem="more" id="Nqh-Jh-QdE"/>
                                 </items>
                             </tabBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snZ-xT-U5d">
+                                <rect key="frame" x="20" y="72" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Subscribe:" destination="vBN-AU-9Kk" eventType="touchUpInside" id="nVp-p4-tEH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -221,6 +228,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background-1" width="564" height="1055"/>
+        <image name="background" width="320" height="480"/>
     </resources>
 </document>
