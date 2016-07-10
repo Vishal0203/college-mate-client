@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		73289FE168A8378CC389F5E8 /* Pods_collegemate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CF62CCFB51A9A4D27050DF /* Pods_collegemate.framework */; };
 		9BA65ABBB21BBA190C75BF2F /* Pods_collegemateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F04698522E3442BC98BE656 /* Pods_collegemateTests.framework */; };
+		C97F342B1D31247700D3B398 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F342A1D31247700D3B398 /* SideMenuController.swift */; };
+		C97F342F1D325C7800D3B398 /* SideMenuCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F342E1D325C7800D3B398 /* SideMenuCustomCell.swift */; };
 		C999B57A1D2E1B6400EA87A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C999B5791D2E1B6400EA87A2 /* GoogleService-Info.plist */; };
 		C9D356661D22DAF800E1BC51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D356651D22DAF800E1BC51 /* AppDelegate.swift */; };
 		C9D3566B1D22DAF800E1BC51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D356691D22DAF800E1BC51 /* Main.storyboard */; };
@@ -37,7 +39,10 @@
 		61C2A90F6CEED3B1CBAFE4C2 /* Pods-collegemate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collegemate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-collegemate/Pods-collegemate.debug.xcconfig"; sourceTree = "<group>"; };
 		70CF62CCFB51A9A4D27050DF /* Pods_collegemate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_collegemate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87ED6EC70316C3FBA304561D /* Pods-collegemate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collegemate.release.xcconfig"; path = "Pods/Target Support Files/Pods-collegemate/Pods-collegemate.release.xcconfig"; sourceTree = "<group>"; };
+		AA8780EECD43FB0887C4534B /* Pods-collegemate.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collegemate.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-collegemate/Pods-collegemate.adhoc.xcconfig"; sourceTree = "<group>"; };
 		B9E0C4AEE80070D2488DB138 /* Pods-collegemateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collegemateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-collegemateTests/Pods-collegemateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C97F342A1D31247700D3B398 /* SideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
+		C97F342E1D325C7800D3B398 /* SideMenuCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuCustomCell.swift; sourceTree = "<group>"; };
 		C999B5791D2E1B6400EA87A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C9D356621D22DAF800E1BC51 /* collegemate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = collegemate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D356651D22DAF800E1BC51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 		C9D3568A1D23199E00E1BC51 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C9D3568C1D239B7200E1BC51 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C9D356911D2439FA00E1BC51 /* HttpHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpHelper.swift; sourceTree = "<group>"; };
+		CE4A41670D5A76A1C76134B4 /* Pods-collegemateTests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collegemateTests.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-collegemateTests/Pods-collegemateTests.adhoc.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,8 @@
 				87ED6EC70316C3FBA304561D /* Pods-collegemate.release.xcconfig */,
 				B9E0C4AEE80070D2488DB138 /* Pods-collegemateTests.debug.xcconfig */,
 				2C454C0BADBF726FAA565A75 /* Pods-collegemateTests.release.xcconfig */,
+				AA8780EECD43FB0887C4534B /* Pods-collegemate.adhoc.xcconfig */,
+				CE4A41670D5A76A1C76134B4 /* Pods-collegemateTests.adhoc.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -101,6 +109,8 @@
 			children = (
 				C9D3568C1D239B7200E1BC51 /* LoginViewController.swift */,
 				C9D3568A1D23199E00E1BC51 /* HomeViewController.swift */,
+				C97F342A1D31247700D3B398 /* SideMenuController.swift */,
+				C97F342E1D325C7800D3B398 /* SideMenuCustomCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -380,9 +390,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9D3568D1D239B7200E1BC51 /* LoginViewController.swift in Sources */,
+				C97F342B1D31247700D3B398 /* SideMenuController.swift in Sources */,
 				C9D356921D2439FA00E1BC51 /* HttpHelper.swift in Sources */,
 				C9D356661D22DAF800E1BC51 /* AppDelegate.swift in Sources */,
 				C9D356891D22EE9200E1BC51 /* SWRevealViewController.m in Sources */,
+				C97F342F1D325C7800D3B398 /* SideMenuCustomCell.swift in Sources */,
 				C9D3568B1D23199E00E1BC51 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,7 +480,7 @@
 		};
 		C9A761381D2FE2B500D998E6 /* adHoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87ED6EC70316C3FBA304561D /* Pods-collegemate.release.xcconfig */;
+			baseConfigurationReference = AA8780EECD43FB0887C4534B /* Pods-collegemate.adhoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -485,7 +497,7 @@
 		};
 		C9A761391D2FE2B500D998E6 /* adHoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C454C0BADBF726FAA565A75 /* Pods-collegemateTests.release.xcconfig */;
+			baseConfigurationReference = CE4A41670D5A76A1C76134B4 /* Pods-collegemateTests.adhoc.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = collegemateTests/Info.plist;

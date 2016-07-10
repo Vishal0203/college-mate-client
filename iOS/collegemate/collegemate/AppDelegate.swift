@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerUserNotificationSettings(settings)
         application.registerForRemoteNotifications()
 
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         
         FIRApp.configure()
         
@@ -61,8 +62,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-//        FIRMessaging.messaging().disconnect()
-//        print("Disconnected from FCM.")
+        FIRMessaging.messaging().disconnect()
+        print("Disconnected from FCM.")
     }
 
     func applicationWillEnterForeground(application: UIApplication) {

@@ -9,6 +9,7 @@ target 'collegemate' do
   use_frameworks!
   
   pod 'SwiftyJSON'  
+  pod 'OpenSans'
 
   # Pods for collegemate
 

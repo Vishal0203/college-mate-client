@@ -13,12 +13,8 @@ import FirebaseInstanceID
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var navMenu: UIBarButtonItem!
     
-    @IBAction func Subscribe(sender: AnyObject) {
-        FIRMessaging.messaging().subscribeToTopic("/topics/ios")
-        print("Subscribed to ios topic")
-    }
+    @IBOutlet weak var navMenu: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +29,8 @@ class HomeViewController: UIViewController {
     }
     
     func customizeSideMenu() -> Void {
-        self.revealViewController().rearViewRevealWidth = 300.0
-        self.revealViewController().rearViewRevealDisplacement = 60.0
+        self.revealViewController().rearViewRevealWidth = 280.0
+        self.revealViewController().rearViewRevealDisplacement = 80.0
         
         self.revealViewController().toggleAnimationType = SWRevealToggleAnimationType.Spring
         self.revealViewController().toggleAnimationDuration = 0.85
@@ -46,6 +42,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        /*
         let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         if let token = prefs.stringForKey("todevs_token") {
             print(token)
@@ -54,7 +51,7 @@ class HomeViewController: UIViewController {
             }
         } else {
             self.performSegueWithIdentifier("requiresLogin", sender: self)
-        }
+        }*/
     }
 
     override func didReceiveMemoryWarning() {
