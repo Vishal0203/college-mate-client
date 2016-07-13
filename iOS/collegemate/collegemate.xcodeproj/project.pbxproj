@@ -18,7 +18,7 @@
 		C9D356701D22DAF800E1BC51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D3566E1D22DAF800E1BC51 /* LaunchScreen.storyboard */; };
 		C9D3567B1D22DAF800E1BC51 /* collegemateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3567A1D22DAF800E1BC51 /* collegemateTests.swift */; };
 		C9D356891D22EE9200E1BC51 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D356881D22EE9200E1BC51 /* SWRevealViewController.m */; };
-		C9D3568B1D23199E00E1BC51 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3568A1D23199E00E1BC51 /* HomeViewController.swift */; };
+		C9D3568B1D23199E00E1BC51 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3568A1D23199E00E1BC51 /* NotificationsViewController.swift */; };
 		C9D3568D1D239B7200E1BC51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3568C1D239B7200E1BC51 /* LoginViewController.swift */; };
 		C9D356921D2439FA00E1BC51 /* HttpHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D356911D2439FA00E1BC51 /* HttpHelper.swift */; };
 /* End PBXBuildFile section */
@@ -56,7 +56,7 @@
 		C9D356861D22EE9100E1BC51 /* collegemate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "collegemate-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9D356871D22EE9200E1BC51 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../iOS Practice/SWRevealViewController/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
 		C9D356881D22EE9200E1BC51 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../iOS Practice/SWRevealViewController/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
-		C9D3568A1D23199E00E1BC51 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C9D3568A1D23199E00E1BC51 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		C9D3568C1D239B7200E1BC51 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C9D356911D2439FA00E1BC51 /* HttpHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpHelper.swift; sourceTree = "<group>"; };
 		CE4A41670D5A76A1C76134B4 /* Pods-collegemateTests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collegemateTests.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-collegemateTests/Pods-collegemateTests.adhoc.xcconfig"; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				C9D3568C1D239B7200E1BC51 /* LoginViewController.swift */,
-				C9D3568A1D23199E00E1BC51 /* HomeViewController.swift */,
+				C9D3568A1D23199E00E1BC51 /* NotificationsViewController.swift */,
 				C97F342A1D31247700D3B398 /* SideMenuController.swift */,
 				C97F342E1D325C7800D3B398 /* SideMenuCustomCell.swift */,
 			);
@@ -395,7 +395,7 @@
 				C9D356661D22DAF800E1BC51 /* AppDelegate.swift in Sources */,
 				C9D356891D22EE9200E1BC51 /* SWRevealViewController.m in Sources */,
 				C97F342F1D325C7800D3B398 /* SideMenuCustomCell.swift in Sources */,
-				C9D3568B1D23199E00E1BC51 /* HomeViewController.swift in Sources */,
+				C9D3568B1D23199E00E1BC51 /* NotificationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

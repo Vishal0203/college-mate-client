@@ -11,7 +11,7 @@ import Firebase
 import FirebaseMessaging
 import FirebaseInstanceID
 
-class HomeViewController: UIViewController {
+class NotificationsViewController: UIViewController {
 
     
     @IBOutlet weak var navMenu: UIBarButtonItem!
@@ -42,7 +42,6 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        /*
         let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         if let token = prefs.stringForKey("todevs_token") {
             print(token)
@@ -51,7 +50,7 @@ class HomeViewController: UIViewController {
             }
         } else {
             self.performSegueWithIdentifier("requiresLogin", sender: self)
-        }*/
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,15 +58,16 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "requiresLogin" {
+            segue.destinationViewController.navigationController?.setNavigationBarHidden(true, animated: false)
+            segue.destinationViewController.hidesBottomBarWhenPushed = true
+        }
     }
-    */
-
+ 
 }
