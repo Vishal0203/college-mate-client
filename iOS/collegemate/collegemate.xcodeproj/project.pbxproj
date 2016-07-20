@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		73289FE168A8378CC389F5E8 /* Pods_collegemate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CF62CCFB51A9A4D27050DF /* Pods_collegemate.framework */; };
 		9BA65ABBB21BBA190C75BF2F /* Pods_collegemateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F04698522E3442BC98BE656 /* Pods_collegemateTests.framework */; };
+		C93619371D3F479D0071B0C7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93619361D3F479D0071B0C7 /* SWRevealViewController.m */; };
 		C97F342B1D31247700D3B398 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F342A1D31247700D3B398 /* SideMenuController.swift */; };
 		C97F342F1D325C7800D3B398 /* SideMenuCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F342E1D325C7800D3B398 /* SideMenuCustomCell.swift */; };
 		C999B57A1D2E1B6400EA87A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C999B5791D2E1B6400EA87A2 /* GoogleService-Info.plist */; };
@@ -17,7 +18,6 @@
 		C9D3566D1D22DAF800E1BC51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D3566C1D22DAF800E1BC51 /* Assets.xcassets */; };
 		C9D356701D22DAF800E1BC51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D3566E1D22DAF800E1BC51 /* LaunchScreen.storyboard */; };
 		C9D3567B1D22DAF800E1BC51 /* collegemateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3567A1D22DAF800E1BC51 /* collegemateTests.swift */; };
-		C9D356891D22EE9200E1BC51 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D356881D22EE9200E1BC51 /* SWRevealViewController.m */; };
 		C9D3568B1D23199E00E1BC51 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3568A1D23199E00E1BC51 /* NotificationsViewController.swift */; };
 		C9D3568D1D239B7200E1BC51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3568C1D239B7200E1BC51 /* LoginViewController.swift */; };
 		C9D356921D2439FA00E1BC51 /* HttpHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D356911D2439FA00E1BC51 /* HttpHelper.swift */; };
@@ -41,6 +41,8 @@
 		87ED6EC70316C3FBA304561D /* Pods-collegemate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collegemate.release.xcconfig"; path = "Pods/Target Support Files/Pods-collegemate/Pods-collegemate.release.xcconfig"; sourceTree = "<group>"; };
 		AA8780EECD43FB0887C4534B /* Pods-collegemate.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collegemate.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-collegemate/Pods-collegemate.adhoc.xcconfig"; sourceTree = "<group>"; };
 		B9E0C4AEE80070D2488DB138 /* Pods-collegemateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collegemateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-collegemateTests/Pods-collegemateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C93619351D3F479D0071B0C7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C93619361D3F479D0071B0C7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		C97F342A1D31247700D3B398 /* SideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
 		C97F342E1D325C7800D3B398 /* SideMenuCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuCustomCell.swift; sourceTree = "<group>"; };
 		C999B5791D2E1B6400EA87A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -54,8 +56,6 @@
 		C9D3567A1D22DAF800E1BC51 /* collegemateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collegemateTests.swift; sourceTree = "<group>"; };
 		C9D3567C1D22DAF800E1BC51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9D356861D22EE9100E1BC51 /* collegemate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "collegemate-Bridging-Header.h"; sourceTree = "<group>"; };
-		C9D356871D22EE9200E1BC51 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../iOS Practice/SWRevealViewController/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
-		C9D356881D22EE9200E1BC51 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../iOS Practice/SWRevealViewController/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		C9D3568A1D23199E00E1BC51 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		C9D3568C1D239B7200E1BC51 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C9D356911D2439FA00E1BC51 /* HttpHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpHelper.swift; sourceTree = "<group>"; };
@@ -163,8 +163,8 @@
 		C9D356851D22EE4400E1BC51 /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C9D356871D22EE9200E1BC51 /* SWRevealViewController.h */,
-				C9D356881D22EE9200E1BC51 /* SWRevealViewController.m */,
+				C93619351D3F479D0071B0C7 /* SWRevealViewController.h */,
+				C93619361D3F479D0071B0C7 /* SWRevealViewController.m */,
 				C9D356861D22EE9100E1BC51 /* collegemate-Bridging-Header.h */,
 			);
 			name = SWRevealViewController;
@@ -389,11 +389,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93619371D3F479D0071B0C7 /* SWRevealViewController.m in Sources */,
 				C9D3568D1D239B7200E1BC51 /* LoginViewController.swift in Sources */,
 				C97F342B1D31247700D3B398 /* SideMenuController.swift in Sources */,
 				C9D356921D2439FA00E1BC51 /* HttpHelper.swift in Sources */,
 				C9D356661D22DAF800E1BC51 /* AppDelegate.swift in Sources */,
-				C9D356891D22EE9200E1BC51 /* SWRevealViewController.m in Sources */,
 				C97F342F1D325C7800D3B398 /* SideMenuCustomCell.swift in Sources */,
 				C9D3568B1D23199E00E1BC51 /* NotificationsViewController.swift in Sources */,
 			);
