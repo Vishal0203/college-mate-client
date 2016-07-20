@@ -9,12 +9,15 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SkyFloatingLabelTextField
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var username: UITextField!
     
     @IBOutlet weak var password: UITextField!
+    
+    @IBOutlet weak var loginButton: UIButton!
     
     @IBAction func loginPress(sender: AnyObject) {
         
@@ -70,8 +73,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.loginButton.layer.cornerRadius = 2
     }
     
     override func viewWillAppear(animated: Bool) {

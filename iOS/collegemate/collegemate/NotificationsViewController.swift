@@ -11,14 +11,10 @@ import Firebase
 import FirebaseMessaging
 import FirebaseInstanceID
 
-class HomeViewController: UIViewController {
+class NotificationsViewController: UIViewController {
 
-    @IBOutlet weak var navMenu: UIBarButtonItem!
     
-    @IBAction func Subscribe(sender: AnyObject) {
-        FIRMessaging.messaging().subscribeToTopic("/topics/ios")
-        print("Subscribed to ios topic")
-    }
+    @IBOutlet weak var navMenu: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +29,8 @@ class HomeViewController: UIViewController {
     }
     
     func customizeSideMenu() -> Void {
-        self.revealViewController().rearViewRevealWidth = 300.0
-        self.revealViewController().rearViewRevealDisplacement = 60.0
+        self.revealViewController().rearViewRevealWidth = 280.0
+        self.revealViewController().rearViewRevealDisplacement = 80.0
         
         self.revealViewController().toggleAnimationType = SWRevealToggleAnimationType.Spring
         self.revealViewController().toggleAnimationDuration = 0.85
@@ -62,15 +58,16 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "requiresLogin" {
+            segue.destinationViewController.navigationController?.setNavigationBarHidden(true, animated: false)
+            segue.destinationViewController.hidesBottomBarWhenPushed = true
+        }
     }
-    */
-
+ 
 }
