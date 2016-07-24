@@ -1,46 +1,32 @@
 //
-//  HomeViewController.swift
+//  SentNotificationsController.swift
 //  collegemate
 //
-//  Created by Vishal Sharma on 29/06/16.
+//  Created by Vishal Sharma on 24/07/16.
 //  Copyright © 2016 ToDevs. All rights reserved.
 //
 
 import UIKit
-import Firebase
-import FirebaseMessaging
-import FirebaseInstanceID
 
-class NotificationsViewController: UIViewController {
+class SentNotificationsController: UIViewController {
 
-    
     @IBOutlet weak var navMenu: UIBarButtonItem!
-    @IBOutlet var notif_view: UIView!
+    @IBOutlet var sent_view: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        if let token = prefs.stringForKey("todevs_token") {
-            print(token)
-            if let user_info = prefs.stringForKey("user_info") {
-                print(user_info)
-            }
-        } else {
-            //            self.performSegueWithIdentifier("requiresLogin", sender: self)
-        }
     }
     
     override func viewDidAppear(animated: Bool) {
         if self.revealViewController() != nil {
             navMenu.target = self.revealViewController()
             navMenu.action = #selector(SWRevealViewController.revealToggle(_:))
-            self.notif_view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.sent_view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
             customizeSideMenu()
         }
     }
-    
     
     func customizeSideMenu() -> Void {
         self.revealViewController().rearViewRevealWidth = 280.0
@@ -54,23 +40,22 @@ class NotificationsViewController: UIViewController {
         self.revealViewController().frontViewShadowOpacity = 0.8
         self.revealViewController().frontViewShadowColor = UIColor.darkGrayColor()
     }
-    
-    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
+
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "requiresLogin" {
-            segue.destinationViewController.navigationController?.setNavigationBarHidden(true, animated: false)
-            segue.destinationViewController.hidesBottomBarWhenPushed = true
-        }
     }
- 
+    */
+
 }

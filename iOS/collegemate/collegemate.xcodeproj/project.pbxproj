@@ -10,6 +10,9 @@
 		73289FE168A8378CC389F5E8 /* Pods_collegemate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CF62CCFB51A9A4D27050DF /* Pods_collegemate.framework */; };
 		9BA65ABBB21BBA190C75BF2F /* Pods_collegemateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F04698522E3442BC98BE656 /* Pods_collegemateTests.framework */; };
 		C93619371D3F479D0071B0C7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93619361D3F479D0071B0C7 /* SWRevealViewController.m */; };
+		C93BE1B51D44034A000FBCC3 /* PushNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93BE1B41D44034A000FBCC3 /* PushNotificationController.swift */; };
+		C93BE1B81D44056D000FBCC3 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93BE1B71D44056D000FBCC3 /* BaseTabBarController.swift */; };
+		C93BE1BB1D440974000FBCC3 /* SentNotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93BE1BA1D440974000FBCC3 /* SentNotificationsController.swift */; };
 		C97F342B1D31247700D3B398 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F342A1D31247700D3B398 /* SideMenuController.swift */; };
 		C97F342F1D325C7800D3B398 /* SideMenuCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F342E1D325C7800D3B398 /* SideMenuCustomCell.swift */; };
 		C999B57A1D2E1B6400EA87A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C999B5791D2E1B6400EA87A2 /* GoogleService-Info.plist */; };
@@ -43,6 +46,9 @@
 		B9E0C4AEE80070D2488DB138 /* Pods-collegemateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collegemateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-collegemateTests/Pods-collegemateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C93619351D3F479D0071B0C7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		C93619361D3F479D0071B0C7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		C93BE1B41D44034A000FBCC3 /* PushNotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationController.swift; sourceTree = "<group>"; };
+		C93BE1B71D44056D000FBCC3 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		C93BE1BA1D440974000FBCC3 /* SentNotificationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentNotificationsController.swift; sourceTree = "<group>"; };
 		C97F342A1D31247700D3B398 /* SideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
 		C97F342E1D325C7800D3B398 /* SideMenuCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuCustomCell.swift; sourceTree = "<group>"; };
 		C999B5791D2E1B6400EA87A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -107,12 +113,23 @@
 		C932DE3A1D266DD20040F88A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C93BE1B91D4408D6000FBCC3 /* Notifications */,
 				C9D3568C1D239B7200E1BC51 /* LoginViewController.swift */,
-				C9D3568A1D23199E00E1BC51 /* NotificationsViewController.swift */,
 				C97F342A1D31247700D3B398 /* SideMenuController.swift */,
 				C97F342E1D325C7800D3B398 /* SideMenuCustomCell.swift */,
+				C93BE1B71D44056D000FBCC3 /* BaseTabBarController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C93BE1B91D4408D6000FBCC3 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				C9D3568A1D23199E00E1BC51 /* NotificationsViewController.swift */,
+				C93BE1B41D44034A000FBCC3 /* PushNotificationController.swift */,
+				C93BE1BA1D440974000FBCC3 /* SentNotificationsController.swift */,
+			);
+			name = Notifications;
 			sourceTree = "<group>";
 		};
 		C9D356591D22DAF800E1BC51 = {
@@ -389,10 +406,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93BE1BB1D440974000FBCC3 /* SentNotificationsController.swift in Sources */,
 				C93619371D3F479D0071B0C7 /* SWRevealViewController.m in Sources */,
 				C9D3568D1D239B7200E1BC51 /* LoginViewController.swift in Sources */,
+				C93BE1B81D44056D000FBCC3 /* BaseTabBarController.swift in Sources */,
 				C97F342B1D31247700D3B398 /* SideMenuController.swift in Sources */,
 				C9D356921D2439FA00E1BC51 /* HttpHelper.swift in Sources */,
+				C93BE1B51D44034A000FBCC3 /* PushNotificationController.swift in Sources */,
 				C9D356661D22DAF800E1BC51 /* AppDelegate.swift in Sources */,
 				C97F342F1D325C7800D3B398 /* SideMenuCustomCell.swift in Sources */,
 				C9D3568B1D23199E00E1BC51 /* NotificationsViewController.swift in Sources */,
