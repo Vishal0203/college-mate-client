@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class SideMenuController: UIViewController, UITableViewDataSource {
 
@@ -14,6 +16,24 @@ class SideMenuController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var userName: UITextView!
     @IBOutlet weak var selectedInstitute: UITextView!
     @IBOutlet weak var logoutButton: UIButton!
+    
+    
+    @IBAction func onLogoutClick(sender: UIButton) {
+        Alamofire.request(HttpHelper.Router.logout())
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+                    prefs.setValue(nil, forKey: "user_info")
+                    prefs.synchronize()
+                    
+                    self.performSegueWithIdentifier("logoutSuccess", sender: self)
+                case .Failure:
+                    HttpHelper.errorHandler(response)
+                }
+        }
+    }
     
     let allOptions = [
         ("Notifications", "m_notis"),

@@ -36,26 +36,6 @@ class LoginViewController: UIViewController {
                 switch response.result {
                 case .Success:
                     if let response = response.result.value {
-                        let auth_token = JSON(response)["token"].stringValue
-                        
-                        let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-                        prefs.setObject(auth_token, forKey: "todevs_token")
-                        
-                        self.getUserData(auth_token)
-                    }
-                case .Failure:
-                    HttpHelper.errorHandler(response)
-                }
-        }
-    }
-    
-    func getUserData(auth_token: String) -> Void {
-        Alamofire.request(HttpHelper.Router.whoami(["from": "web"]))
-            .validate()
-            .responseJSON { response in
-                switch response.result {
-                case .Success:
-                    if let response = response.result.value {
                         let user_info = JSON(response)["user"].rawString()
                         
                         let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()

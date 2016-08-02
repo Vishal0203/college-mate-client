@@ -19,19 +19,16 @@ class NotificationsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        if let token = prefs.stringForKey("todevs_token") {
-            print(token)
-            if let user_info = prefs.stringForKey("user_info") {
-                print(user_info)
-            }
-        } else {
-            //            self.performSegueWithIdentifier("requiresLogin", sender: self)
-        }
     }
     
     override func viewDidAppear(animated: Bool) {
+        let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        if let user_info = prefs.stringForKey("user_info") {
+            print(user_info)
+        } else {
+            self.performSegueWithIdentifier("requiresLogin", sender: self)
+        }
+        
         if self.revealViewController() != nil {
             navMenu.target = self.revealViewController()
             navMenu.action = #selector(SWRevealViewController.revealToggle(_:))

@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="owe-LL-HLG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2870" y="-1489"/>
+            <point key="canvasLocation" x="-2954" y="-1489"/>
         </scene>
         <!--Base Tab Bar Controller-->
         <scene sceneID="jZK-y2-ZqO">
@@ -481,6 +481,9 @@
                                         <state key="normal" title="Logout">
                                             <color key="titleColor" red="0.97647058819999999" green="1" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onLogoutClick:" destination="twP-zi-dtV" eventType="touchUpInside" id="JSb-ZX-KBm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.21960784310000001" green="0.26274509800000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -514,11 +517,12 @@
                         <outlet property="profilePic" destination="xrS-oV-b74" id="uGS-1b-Xaj"/>
                         <outlet property="selectedInstitute" destination="L5r-7L-6ac" id="MBi-xl-GkD"/>
                         <outlet property="userName" destination="OKb-fM-CtH" id="8HO-Pi-pQc"/>
+                        <segue destination="iUJ-fK-Hf5" kind="custom" identifier="logoutSuccess" customClass="SWRevealViewControllerSeguePushController" id="2PV-KZ-Bff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8I-Nk-hKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2870" y="-683"/>
+            <point key="canvasLocation" x="-2954" y="-683"/>
         </scene>
     </scenes>
     <resources>
@@ -526,9 +530,12 @@
         <image name="background" width="320" height="480"/>
         <image name="hammenu" width="21" height="14"/>
         <image name="logo" width="147" height="120"/>
-        <image name="push" width="50" height="50"/>
-        <image name="received" width="51" height="51"/>
-        <image name="sent" width="50" height="50"/>
+        <image name="push" width="25" height="25"/>
+        <image name="received" width="25" height="25"/>
+        <image name="sent" width="25" height="25"/>
         <image name="settings" width="18" height="19"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2PV-KZ-Bff"/>
+    </inferredMetricsTieBreakers>
 </document>

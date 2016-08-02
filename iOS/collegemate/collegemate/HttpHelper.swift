@@ -15,11 +15,12 @@ class HttpHelper: NSObject {
         static let baseURLString = "http://139.59.4.205/api/v1_0"
         
         case whoami([String: String])
+        case logout()
         case token_refresh()
         
         var method: Alamofire.Method {
             switch self {
-            case .whoami, .token_refresh:
+            case .whoami, .logout, .token_refresh:
                 return .GET
             }
         }
@@ -28,6 +29,8 @@ class HttpHelper: NSObject {
             switch self {
             case .whoami:
                 return "/whoami"
+            case .logout:
+                return "/logout"
             case .token_refresh:
                 return "/refresh"
             }
@@ -38,15 +41,10 @@ class HttpHelper: NSObject {
             let mutableURLRequest = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(path))
             mutableURLRequest.HTTPMethod = method.rawValue
             
-            let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-            if let token = prefs.stringForKey("todevs_token") {
-                mutableURLRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-            }
-            
-            
             switch self {
             case .whoami(let parameters):
                 return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: parameters).0
+            
             default:
                 return mutableURLRequest
             }
